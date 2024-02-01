@@ -20,7 +20,12 @@ class Program
             Console.WriteLine("Welcome to Tic-Tac-Toe!");
             GameBoard.PrintBoard(board);
             Console.WriteLine($"Player {currentPlayer}, choose a position:");
-            int choice = Convert.ToInt32(Console.ReadLine());
+
+            int choice;
+            while (!int.TryParse(Console.ReadLine(), out choice) || choice < 1 || choice > 9)
+            {
+                Console.WriteLine("Invalid input. Please enter a number between 1 and 9.");
+            }
 
             int row = (choice - 1) / 3;
             int col = (choice - 1) % 3;
