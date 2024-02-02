@@ -2,8 +2,6 @@
 
 public class GameBoard
 {
-
-    // This method prints the board 3 by 3 and writes out all the numbers
     public static void PrintBoard(string[,] board)
     {
         for (int i = 0; i < board.GetLength(0); i++)
@@ -16,9 +14,6 @@ public class GameBoard
         }
     }
 
-
-    // This method checks for the winner by going through each row and seeing if they are all in row. If it is then 
-    // it will return a winner. If there is no winner it will return false. 
     public static bool CheckForWinner(string[,] board)
     {
         // Check rows
